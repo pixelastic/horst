@@ -1,0 +1,9 @@
+Horst is a simple script to change the fps of an srt file.
+
+For example `horst subtitle.srt 25 23.976` will convert `subtitle.srt` from 25 fps
+to 23.976 fps.
+
+As srt file does not contain any information on the fps they are using, this is
+your job to find this value.
+
+
