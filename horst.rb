@@ -38,13 +38,13 @@ end
 
 # Convert a timestamp in ms to a timing
 def timestamp_to_timing(timestamp)
-	h = "%02d" % (timestamp / 3600000 % 60)
+	h = "%02d" % (timestamp / 3600000)
 	timestamp = timestamp % 3600000
 
-	m = "%02d" % (timestamp / 60000 % 60)
+	m = "%02d" % (timestamp / 60000)
 	timestamp = timestamp % 60000
 
-	s = "%02d" % (timestamp / 1000 % 60)
+	s = "%02d" % (timestamp / 1000)
 	timestamp = timestamp % 1000
 
 	ms = "%03d" % (timestamp)

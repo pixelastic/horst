@@ -23,15 +23,17 @@ class HorstTests < Test::Unit::TestCase
 	end
 
 	def test_timing_to_timestamp
-		input = "00:00:28,572"
-		expected = 28572
-		assert_equal(expected, timing_to_timestamp(input))
+		assert_equal(572, timing_to_timestamp("00:00:00,572"))
+		assert_equal(28572, timing_to_timestamp("00:00:28,572"))
+		assert_equal(88572, timing_to_timestamp("00:01:28,572"))
+		assert_equal(3688572, timing_to_timestamp("01:01:28,572"))
 	end
 
 	def test_timestamp_to_timing
-		input = 28572
-		expected = "00:00:28,572"
-		assert_equal(expected, timestamp_to_timing(input))
+		assert_equal("00:00:00,572", timestamp_to_timing(572))
+		assert_equal("00:00:28,572", timestamp_to_timing(28572))
+		assert_equal("00:01:28,572", timestamp_to_timing(88572))
+		assert_equal("01:01:28,572", timestamp_to_timing(3688572))
 	end
 
 	def test_change_speed
