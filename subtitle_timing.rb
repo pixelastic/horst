@@ -2,12 +2,17 @@
 
 class SubtitleTiming
 
+	# Accept a timing string or a timestamp for init
 	def initialize(timing)
-		if timing[':']
+		if timing.instance_of?(String) && timing[':']
 			@value = self.timing_to_timestamp(timing)
 		else
-			@value = timing
+			@value = timing.to_i
 		end
+	end
+
+	def to_s
+		to_timing
 	end
 
 	# Return the timing as a timestamp
@@ -21,7 +26,7 @@ class SubtitleTiming
 	end
 
 	# Convert a timestamp in ms to a timing
-	def self.timestamp_to_timing(timestamp)
+	def timestamp_to_timing(timestamp)
 		h = "%02d" % (timestamp / 3600000)
 		timestamp = timestamp % 3600000
 
@@ -36,7 +41,7 @@ class SubtitleTiming
 	end
 
 	# Convert a timing to a timestamp
-	def self.timing_to_timestamp(timing)
+	def timing_to_timestamp(timing)
 		split = timing.split(/:/)
 		h = split[0].to_i
 		m = split[1].to_i

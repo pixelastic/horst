@@ -1,10 +1,14 @@
 # encoding : utf-8
+require_relative 'subtitle_timing'
 
 class SubtitleLine
 
-	def initialize(value)
-		@value = line
-		return self
+	def initialize(*params)
+		@value = params[0]
+	end
+
+	def to_s
+		@value
 	end
 
 	# Is this a timing line ?
@@ -18,7 +22,7 @@ class SubtitleLine
 
 	# Set the line as a timing line 
 	def timing_line(start, stop)
-		@value = "#{start.to_ms} --> #{stop.to_ms}"
+		@value = "#{start.to_timing} --> #{stop.to_timing}"
 		return self
 	end
 
