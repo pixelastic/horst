@@ -12,8 +12,14 @@ class Horst
 		@old_fps = @old_fps.to_f
 		@new_fps = @new_fps.to_f
 
+	end
+
+	def change_speed
 		puts SubtitleFile.new(@file).change_speed(@old_fps, @new_fps)
 	end
 
+
 end
+
+Horst.new(*ARGV).change_speed
 

@@ -28,4 +28,11 @@ class SubtitleLineTests < Test::Unit::TestCase
 		assert_equal([], timings)
 	end
 
+	def test_change_speed
+		input = SubtitleLine.new("00:00:28,572 --> 00:00:33,237").change_speed(23.976, 25).to_s
+		expected = "00:00:27,401 --> 00:00:31,875"
+		assert_equal(expected, input)
+
+	end
+
 end

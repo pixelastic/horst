@@ -33,4 +33,15 @@ class SubtitleLine
 		return [SubtitleTiming.new(a), SubtitleTiming.new(b)]
 	end
 
+	def change_speed(old_fps, new_fps)
+		timingStart, timingEnd = self.timings
+
+		timingStart.change_speed(old_fps, new_fps)
+		timingEnd.change_speed(old_fps, new_fps)
+
+		self.timing_line(timingStart, timingEnd)
+
+		return self
+	end
+
 end

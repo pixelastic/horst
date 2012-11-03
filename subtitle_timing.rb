@@ -59,7 +59,8 @@ class SubtitleTiming
 	# Change a timing according to new fps
 	def change_speed(old_fps, new_fps)
 		ratio = old_fps.to_f / new_fps.to_f
-		return @value * ratio
+		@value = @value * ratio
+		return self
 	end
 end
 
