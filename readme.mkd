@@ -1,14 +1,17 @@
 What is it ?
 ============
-Horst is a simple script to change the fps of a .srt file.
+
+Horst is a simple script to change the fps of a `.srt` file.
 
 Usage
 =====
-`horst subtitle.srt 25 23.976` will convert `subtitle.srt` from 25 fps
-to 23.976 fps.
+
+`ruby horst.rb subtitle.srt 25 23.976` will convert `subtitle.srt` from 25 fps
+to 23.976 fps and output it.
 
 Notes
 =====
-As srt file does not contain any information on the fps they are using, this is
-your job to find this value. This is usually displayed on the website where you
-downloaded the file.
+
+As `.srt` file does not contain any information on the fps they are using, this
+is your job to find this value. This is usually displayed on the website where
+you downloaded the file.
