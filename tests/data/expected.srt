@@ -1,0 +1,15 @@
+1
+00:00:26,246 --> 00:00:30,532
+<i>Quand on prie la bonne étoile</i>
+
+2
+00:00:30,647 --> 00:00:35,294
+<i>La fée bleue secoue son voile</i>
+
+3
+00:00:35,409 --> 00:00:39,321
+<i>Et vient accorder</i>
+
+4
+00:00:39,436 --> 00:00:45,074
+<i>Ce qu'on a demandé</i>
