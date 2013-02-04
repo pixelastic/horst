@@ -1,6 +1,6 @@
 # encoding : utf-8
 require 'test/unit'
-require '../subtitle_file'
+require_relative '../subtitle_file'
 
 class SubtitleFileTest < Test::Unit::TestCase
 

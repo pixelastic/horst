@@ -1,6 +1,6 @@
 # encoding : utf-8
 require 'test/unit'
-require '../subtitle_timing'
+require_relative '../subtitle_timing'
 
 class SubtitleTimingTests < Test::Unit::TestCase
 
@@ -29,7 +29,7 @@ class SubtitleTimingTests < Test::Unit::TestCase
 	end
 
 	def test_change_speed
-		assert_equal("00:00:27,401", SubtitleTiming.new("00:00:28,572").change_speed(23.976, 25))
+		assert_equal("00:00:27,401", SubtitleTiming.new("00:00:28,572").change_speed(23.976, 25).to_timing)
 	end
 
 end
